@@ -1,0 +1,233 @@
+.logos {
+    height: 12vw;
+    /* tamanho da logo das marcas */
+}
+
+.container-marcas {
+    display: grid;
+    /* garante que o container ta em grid, com um espaço de 30px entre os itens, com as colunas divididas em partes iguais,
+     e centralizado com o margin e justify content*/
+    grid-template-columns: 20vw 20vw 20vw;
+    grid-template-rows: 18vh repeat(5, 40vh);
+    gap: 30px;
+    width: 62%;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 30vh;
+    padding: 15vh;
+}
+
+.marcas {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    /* Centraliza o titulo do container no centro */
+}
+
+.marcas p{
+    font-family: "barlow";
+    font-size: 2.2vh;
+    margin-top: 2vh;
+}
+
+.sombra{
+    box-shadow:
+        0 0 5px burlywood,
+        0 0 15px bisque,
+        0 0 30px beige;
+}
+
+/* MARCAS */
+
+.alfa {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+    /* Deixa as imagens em flex, alinhadas no centro com 90% da largura do container. */
+    
+}
+
+.aston {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+    
+}
+
+.bmw {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+
+}
+
+.chevrolet {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+    
+}
+
+.ferrari {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;}
+
+.ford {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.lambo {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.mercedes {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.mitsubish {
+    grid-row: 4 / 5;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.nissan {
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.porsche {
+    grid-row: 5 / 6;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.rr {
+    grid-row: 5 / 6;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.subaru {
+    grid-row: 6 / 7;
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.toyota {
+    grid-row: 6 / 7;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.vw {
+    grid-row: 6 / 7;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+
+.carros:hover {
+    transform: translateY(-5px) scale(1.03);
+    transition: 1s;
+    /* Quando o mouse passa por cima do que tiver a classe "carros" a imagem sobe e atinge o vertice em 1s */
+}
+
+.carros {
+    transition: 1s ease;
+    /* transição padrão */
+}
+
+.container-marcas:has(.carros:hover) .carros { /* o navegador vê se têm algo interagindo com o hover da classe carros*/
+    filter: brightness(.5);
+    /* diminui o brilho quando o hover de algo com a classe carros começa */
+}
+
+.container-marcas:has(.carros:hover) .carros:hover {
+    /* Quando algum elemento .carros dentro do container estiver com :hover, seleciona exatamente esse .carros para receber os estilos*/
+    filter: brightness(1);
+}

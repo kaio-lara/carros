@@ -1,0 +1,40 @@
+
+
+.container-fontes{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-fontes {
+    font-size: 5vh;
+    font-weight: 500;
+}
+
+.sub-title-fontes {
+    font-family: 'barlow';
+    width: 62vw;
+}
+
+.text-fontes {
+    width: 62vw;
+    margin-bottom: 10vh;
+}
+
+.text-fontes ul li{
+    list-style: none;
+    background: url(../img/fontes_img/roda.svg) left center/ 3vh 3vh no-repeat;
+    margin-bottom: 3vh;
+    padding-left: 3vw;
+    min-height: 5vh;  /* FORCA UMA ALTURA MINIMA PARA A RODA, SEM ELA FICAR CORTADA */
+    display: flex; 
+    align-items: center;
+}
+
+ul p {
+    margin-top: 5vh;
+    font-size: 2.5vh;
+    font-weight: 500;
+}

@@ -1,0 +1,27 @@
+.all{
+    margin:  0 auto;
+    margin-top: 6vw;
+    width: 62%;
+    height: 100%;
+}
+
+.barlow{
+    font-family: "barlow";
+}
+
+.green {
+    color: green;
+}
+
+img{
+    width: 100%;
+}
+
+.concept{
+    width: auto;
+    margin: 0 auto;
+}
+
+figcaption{
+    font-family: "Inter Tight";
+}

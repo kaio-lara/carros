@@ -1,0 +1,504 @@
+/* FONTES */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap'); /*IMPORTA FONTE DO GOOGLE*/
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Merriweather+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+.orbitron {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.merriweather-sans {
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inter-tight {
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-regular {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root { /* Declarar uma cor universal */
+    --cor-fundo: rgba(20,22,22,0.1);
+    --cor--botao: rgb(17, 17, 17);
+    --cor--botao--hover: rgba(65, 65, 65,1);
+    --cor--botao--borda: rgba(17,17,17,0.5);
+    --cor-principal: #F9F6EE;
+    --cor--secundaria: #EDEADE;
+}
+
+/* HTML */
+
+
+html {
+    scroll-behavior:smooth; /* Faz a âncora não dar TP*/
+}
+
+body {
+    margin: 0;
+    height: 150vh;
+    width: auto;
+    font-family:"Orbitron";
+    font-size: 2vh;
+    background-color: var(--cor-principal);
+}
+
+body::-webkit-scrollbar { /* Esconde a rolagem */
+    display: none; 
+}
+
+
+/* div {
+    border: 1px solid red;
+} */
+
+.container {
+    display: grid;
+    gap: 2vh;
+    
+}
+
+.container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* LINHAS */
+
+.line-about, .line-carros, .line-notices {
+    background-image: url(../img/home_img/linha.svg);
+}
+
+
+/* ANCORAS */
+
+a{
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.5s ease;
+    text-underline-offset: 0.5vh;
+    transform-origin: center;
+    
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration-color: black;
+}
+
+.text-link-carros a{
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.container .header {
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.35);
+    background-color: var(--cor-principal);
+    height: 10vh;
+    width: 100vw;
+    position:fixed; /* Define a posição como fixa na tela, ignorando a rolagem. */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2; /* Define o nível de sobreposicao na página, no eixo Z mesmo */
+    font-size: 2.3vh;
+}
+
+
+
+.header .header-grid {
+    display: grid;
+    height: inherit;
+    width: inherit;
+    grid-template-columns: 31vw 31vw;
+    grid-template-rows: 1fr;
+    height: 100%;
+    width: 100%;
+    background-color: var(--cor--secundaria);
+}
+
+.header-grid .logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 100%;
+    width: 100%;
+    /* background-color: lightblue; */
+    justify-content: start ;
+    margin: 0;
+}
+
+.logo img{
+    height: 10vh;
+    
+}
+
+.header-grid .links {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 100%;
+    width: 100%;
+    /* background-color: lightpink; */
+    justify-content:space-evenly ;
+    margin: 0;
+
+}
+
+
+/* HERO */
+
+.hero {
+    background-size: cover;
+    background-image:url(../img/home_img/garagem_carros.png);
+    background-repeat: no-repeat;
+    height: 97vh;
+    width: inherit; /* Herda da div pai ( container ) */
+}
+
+/* CARROS */
+
+.container .carros {
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    background-color:var(--cor-fundo);
+}
+
+.carros .carros-grid {
+    display: grid;
+    width: 60vw;
+    grid-template-columns: 60vw;
+    grid-template-rows: 8vh 4vh 48vh;
+}
+
+.title-carros {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /*background-color: darkolivegreen;*/
+    height: 100%;
+    font-weight: 500;
+    font-size: 3.5vh;
+}
+
+.line-carros {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    /* background-color: plum; */
+    height: 100%;
+}
+
+.carros-grid .exemplos-carros {
+    height: inherit;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 30vw 30vw;
+    grid-template-rows: 48vh;
+    gap: 2vw;
+}
+
+.ex-carro{
+    border-radius: 2vh;
+    background-color: var(--cor-principal);
+    height: 100%;
+    transform: translateY(0vh); /* Faz ele andar no eixo Y, quanto menor, mais alto */
+    transition: transform 0.3s ease;
+}
+
+.ex-carro:hover {
+    transform: translateY(-1.5vh);
+}
+
+.exemplos-carros .ex1-carros {
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.ex1-img{
+    width: 85%;
+    height: 70%;
+    background-image: url(../img/carros_img/mercedes_img/gtr_2021.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.ex1-p {
+    width: 85%;
+    height: 10%;
+}
+
+.exemplos-carros .ex2-carros {
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+ 
+.ex2-img{
+    width: 85%;
+    height: 70%;
+    background-image: url(../img/carros_img/toyota_img/2000gt-1970.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.ex2-p{
+    width: 85%;
+    height: 10%;
+}
+
+/* BOTAO LINK CARROS */
+
+.text-link-carros {
+    display: inline-block; /* Faz tratar tudo como apenas um bloco, considerando o padding a mesma div*/
+    margin: 2vh;
+    color: white;
+    padding: 2vh;
+    background-color: var(--cor--botao);
+    border-radius: 1vh;
+    scale: 1;
+    outline: 0.1px solid transparent;
+    transition: background-color 0.2s ease;
+    transition: outline 0.2s ease;
+    transition: scale 0.2s ease;
+}
+
+.text-link-carros:hover{
+    background-color: var(--cor--botao--hover);
+    outline: 0.325vh solid var(--cor--botao--borda);
+    scale: 1.025;
+    border-radius: 1vh;
+}
+
+/* SOBRE NOS */
+
+.about {
+    color: black;
+    background-color: var(--cor-principal);
+    height: 60vh;
+}
+
+.about .about-grid {
+    width: 62vw;
+    height: inherit;
+    display: grid;
+    grid-template-columns: 31vw 27vw;
+    grid-template-rows: 10vh 50vh;
+    column-gap: 4vw;
+}
+
+
+.title-about {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    /* background-color: chartreuse; */
+    height: 100%;
+    font-size: 3.5vh;
+    font-weight: 500;
+}
+
+.text-about {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    /* background-color: darkslateblue; */
+    height: 100%;
+    font-family: 'barlow';
+    align-items: flex-start !important;
+}
+    
+.img-about {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-position: center; /* Para centralizar a imagem */
+    background-size: cover; /* Para ele ocupar o espaco da div inteira */
+    background-repeat: no-repeat;
+    height: 100%;
+    background-image: url(../img/home_img/carros-sobre-nos.png);
+}
+
+/* NOTICIAS */
+
+.notices {
+    background-color: var(--cor-fundo);
+    height: 50vh;
+}   
+
+.notices-grid {
+    width: 60vw;
+    height: inherit;
+}
+
+.notices-grid a{
+    text-decoration: none;
+}
+
+.notices .notices-grid {
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw;
+    grid-template-rows: 8vh 4vh 25vh 10vh;
+    column-gap: 1vw;
+}
+
+
+
+
+.title-notices {
+    /* background-color: coral; */
+    grid-column: 1/4;
+    grid-row: 1/2;
+    height: 100%;
+    font-weight: 500;
+    font-size: 3.5vh;
+}
+
+.line-notices {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    /* background-color: teal; */
+    height: 100%;
+}
+
+.nt1{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    height: 28vh;
+    background: url(../img/home_img/nt1_logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.text-nt1{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: 10vh;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-nt2 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: 10vh;
+    /* background-color: rebeccapurple; */
+}
+
+.text-nt3 {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: 10vh;
+    /* background-color: blue; */
+}
+
+
+.text-notices-2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: var(--cor-principal);
+    height: 90%;
+}
+
+.nt2{
+    background: url(../img/home_img/nt2_logo.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 28vh;
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.text-notices-3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-color: var(--cor-principal);
+    height: 90%;
+}
+
+.nt3{
+    background: url(../img/home_img/nt3_logo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 28vh;
+    grid-column: 3/4;
+    grid-row: 3/4;
+
+}
+
+.text-nt1, .text-nt2, .text-nt3 {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.nt1 a, .nt2 a, .nt3 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.nt1 {
+    background-size: 115%;
+    transition: background-size 1s ease;
+}
+
+.nt2, .nt3 {
+    background-size: 100%;
+    transition: background-size 1s ease;
+}
+
+/* Efeito de aumento ao passar o mouse no texto ou na imagem */
+.nt1:hover, .notices-grid:has(.text-nt1:hover) .nt1 {
+    background-size: 135%;
+}
+
+.nt2:hover, .notices-grid:has(.text-nt2:hover) .nt2 {
+    background-size: 120%;
+}
+
+.nt3:hover, .notices-grid:has(.text-nt3:hover) .nt3 {
+    background-size: 120%;
+}
+
+
+/* FOOTER */
+
+.footer {
+    height: 8vh;
+    background-color: var(--cor-principal);
+    white-space:pre-wrap; /* FAZ RESPEITAR OS ESPAÇOS DO HTML */
+    text-align: center;
+}

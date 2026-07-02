@@ -1,0 +1,301 @@
+td,tr{
+    border: 1px solid black;
+    padding: 0.5vw;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.container_carros{
+    display: grid;
+    grid-template-columns: repeat(3, 18vw);
+    grid-template-rows: 5vh 20vh 5vh 20vh 5vh;
+    width: 62%;
+    margin: 0 auto;
+    padding-top: 15vh;
+    justify-content: center;
+    gap: 8.5vh;
+}
+
+.cont_carro{
+    display: flex;
+    height: 25vh;
+    scale:1;
+    transition: 0.25s ease;
+
+}
+
+.cont_carro:hover {
+    scale: 1.1;
+
+}
+
+.cont_carro img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* TEXTOS */
+
+
+/* .container-text {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    pointer-events: none; /* ISSO FARIA ELE FICAR FANTASMA, TERIA Q TIRAR AS MARGISN DO .text-carros
+}   */
+
+/* MODAIS */
+
+.text-carros {
+    background-color: rgba(227, 222, 206, 255);
+    height: 60vh;
+    width: 60vw;
+    position: fixed;
+    z-index: 3;
+    left: 20vw;
+    top: 15vh;
+    display: none;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 5vh 45% 48%;
+    font-family: "Inter Tight";
+    padding: 40px;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.header-modal {
+    grid-column: 1/3;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    font-size: 3vh;
+}
+
+.text-modal {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: center; /* ELE DEFINE JUSTIFY DIFERENTES PARA DIVS */
+    align-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+.img-modal {
+    grid-column: 2/3;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.img-modal img {
+    width: 90%;
+    border-radius: 20px;
+
+}
+
+.nop{
+    width: 90%;
+    height: 100%;
+}
+
+.table-modal {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+#x {
+    background-image: url(../img/modal_img/x.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 4.5vh;
+    width: 2.25vw;
+    position: absolute;
+    right: 45px;
+    scale: 80%;
+    transition: scale 0.5s ease;
+}
+
+#x:hover{
+    scale: 100%;
+}
+
+.title-model {
+    height: 100%;
+    width: 30vw;
+}
+
+
+/* CARROS */
+
+.titulo_carros{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    text-align: center;
+    width: 100%;
+}
+
+.base_texto_carros{
+    text-align: center;
+    width: 100%;
+}
+
+.texto_carros1{
+    grid-column: 1;
+    grid-row: 3;
+    height: 1005;
+}
+
+.texto_carros2{
+    grid-column: 2 ;
+    grid-row: 3;
+    height: 1005;
+}
+
+.texto_carros3{
+    grid-column: 3;
+    grid-row: 3;
+    height: 1005;
+}
+
+.texto_carros4{
+    grid-column: 1;
+    grid-row: 5;
+    height: 1005;
+}
+
+.texto_carros5{
+    grid-column: 2;
+    grid-row: 5;
+    height: 1005;
+}
+
+.texto_carros6{
+    grid-column: 3;
+    grid-row: 5;
+    height: 1005;
+}
+
+.texto_carros7{
+    grid-column: 1;
+    grid-row: 7;
+    height: 1005;
+}
+
+.texto_carros8{
+    grid-column: 2;
+    grid-row: 7;
+    height: 1005;
+}
+
+.texto_carros9{
+    grid-column: 3;
+    grid-row: 7;
+    height: 1005;
+}
+
+.carro1{
+    grid-column: 1;
+    grid-row: 2;
+    border: 2px black solid;
+}
+
+.carro2{
+    grid-column: 2;
+    grid-row:2;
+    border: 2px black solid;
+}
+
+.carro3{
+    grid-column: 3;
+    grid-row:2;
+    border: 2px black solid;
+}
+
+.carro4{
+    grid-column: 1 ;
+    grid-row: 4;
+    border: 2px black solid;
+}
+
+.carro5{
+    grid-column: 2;
+    grid-row: 4;
+    border: 2px black solid;
+}
+
+.carro6{
+    grid-column: 3;
+    grid-row: 4;
+    border: 2px black solid;
+}
+
+.carro7{
+    grid-column: 1;
+    grid-row: 6;
+    border: 2px black solid;
+}
+
+.carro8{
+    grid-column: 2;
+    grid-row: 6;
+    border: 2px black solid;
+}
+
+.carro9{
+    grid-column: 2;
+    grid-row: 6;
+    border: 2px black solid;
+}   
+
+/* ESTILIZACAO DAS IMAGENS */
+
+.cont_carro img{
+    object-fit: cover;
+}
+
+#img_tiguan img{
+    object-position: 10% center; /* FAZ A IMAGEM FICAR MAIS PARA A ESQUERDA DENTRO DO ENQUADRAMENTO POSSIVEL *//* PRECISA TER OBJECT-FIT*/
+}
+
+
+
+#spyder img{
+    object-position: 25% center;
+}
+
+#sf90 img {
+    object-position: 15% center;
+}
+
+
+
+#gtb img {
+    object-position: 10% center;
+}
+
+#triton img{
+    object-position: 7% center;
+}
+
+#lancer img{
+    object-position: 80% center;
+}
+
+#cayenne img{
+    object-position: 65% center;
+}
